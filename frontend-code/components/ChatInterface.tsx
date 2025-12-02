@@ -33,7 +33,7 @@ export default function ChatInterface() {
     setInput("")
 
     try {
-      const BACKEND_URL = "https://didactic-guide-wjj57g99774f5xj-8000.app.github.dev/chat";
+      const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000/chat";
 
       const res = await fetch(BACKEND_URL, {
         method: "POST",
